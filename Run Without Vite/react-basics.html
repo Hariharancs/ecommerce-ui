@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React</title>
+</head>
+
+<body>
+    <div class="js-container"></div>
+    <script src="./react-basics.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+        function GetData() {
+            return (
+                <>
+                    <p> Welcome World</p>
+                    <button>hello</button>
+                </>
+            )
+        }
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<GetData />);
+    </script>
+    <form onsubmit="handleSubmit(event)">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function handleSubmit(e) {
+            console.log("e", e)
+            e.preventDefault()
+            console.log("Form Submitted");
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- Reconciliation -->
